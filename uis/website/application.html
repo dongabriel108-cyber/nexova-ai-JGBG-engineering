@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Regístrate en el banco de talento de Nexova Solutions y comparte tu experiencia, sector de interés, nivel de inglés y disponibilidad."
+    >
+    <meta name="theme-color" content="#0b1f33">
+    <title>Registro de talento | Nexova</title>
+    <link rel="stylesheet" href="./dist/styles.css">
+    <script src="./validation.js" defer></script>
+  </head>
+  <body class="bg-slate-50 font-sans text-slate-800 antialiased">
+    <a
+      class="sr-only rounded-md bg-white px-4 py-3 text-slate-950 focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:outline-2 focus:outline-offset-2 focus:outline-cyan-700"
+      href="#contenido"
+    >Saltar al contenido</a>
+
+    <header class="border-b border-slate-200 bg-white">
+      <div class="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-5 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+        <a
+          class="w-fit rounded-sm text-2xl font-bold tracking-tight text-slate-950 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-700"
+          href="index.html"
+          aria-label="Nexova, Inicio"
+        >Nexova</a>
+        <nav aria-label="Navegación principal">
+          <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-slate-700 sm:justify-end">
+            <li><a class="rounded-sm hover:text-cyan-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-700" href="index.html">Inicio</a></li>
+            <li><a class="rounded-sm hover:text-cyan-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-700" href="index.html#servicios">Servicios</a></li>
+            <li><a class="rounded-sm text-cyan-900 underline decoration-cyan-500 decoration-2 underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-700" href="#contenido" aria-current="page">Talento</a></li>
+            <li><a class="rounded-sm hover:text-cyan-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-700" href="index.html#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido" class="mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-800">Nexova</p>
+        <h1 class="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">Registro de talento</h1>
+        <p class="mt-4 text-base leading-7 text-slate-600">
+          Comparte tu información para que nuestro equipo pueda conocer tu perfil profesional.
+        </p>
+      </div>
+
+      <form id="talent-form" class="mx-auto mt-10 max-w-[850px] rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-9" novalidate>
+        <fieldset id="form-fields" disabled class="grid grid-cols-1 gap-x-6 gap-y-7 lg:grid-cols-2">
+          <legend class="sr-only">Formulario de registro de talento</legend>
+          <p class="text-sm text-slate-600 lg:col-span-2"><span aria-hidden="true">*</span> Campos obligatorios</p>
+
+          <div class="lg:col-span-2">
+            <label for="full-name" class="block text-sm font-semibold text-slate-900">Nombre completo <span aria-hidden="true">*</span></label>
+            <input
+              id="full-name"
+              name="fullName"
+              type="text"
+              autocomplete="name"
+              required
+              aria-describedby="full-name-hint"
+              class="mt-2 min-h-12 w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-950 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-cyan-700 focus:ring-2 focus:ring-cyan-700/20 aria-[invalid=true]:border-rose-700 aria-[invalid=true]:focus:ring-rose-700/20"
+            >
+            <p id="full-name-hint" class="mt-2 text-sm text-slate-600">Escribe al menos tu nombre y apellido.</p>
+            <p id="full-name-error" class="mt-2 text-sm font-medium text-rose-800" hidden role="alert"></p>
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-semibold text-slate-900">Email <span aria-hidden="true">*</span></label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              inputmode="email"
+              required
+              aria-describedby="email-error"
+              class="mt-2 min-h-12 w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-950 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-cyan-700 focus:ring-2 focus:ring-cyan-700/20 aria-[invalid=true]:border-rose-700 aria-[invalid=true]:focus:ring-rose-700/20"
+            >
+            <p id="email-error" class="mt-2 text-sm font-medium text-rose-800" hidden role="alert"></p>
+          </div>
+
+          <div>
+            <label for="phone" class="block text-sm font-semibold text-slate-900">Teléfono <span aria-hidden="true">*</span></label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+              inputmode="tel"
+              placeholder="+34 612 345 678"
+              required
+              aria-describedby="phone-hint"
+              class="mt-2 min-h-12 w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-950 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-cyan-700 focus:ring-2 focus:ring-cyan-700/20 aria-[invalid=true]:border-rose-700 aria-[invalid=true]:focus:ring-rose-700/20"
+            >
+            <p id="phone-hint" class="mt-2 text-sm text-slate-600">Incluye el código de país; por ejemplo, +34 612 345 678.</p>
+            <p id="phone-error" class="mt-2 text-sm font-medium text-rose-800" hidden role="alert"></p>
+          </div>
+
+          <div>
+            <label for="country" class="block text-sm font-semibold text-slate-900">País de residencia <span aria-hidden="true">*</span></label>
+            <select
+              id="country"
+              name="country"
+              required
+              aria-describedby="country-error"
+              class="mt-2 min-h-12 w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-950 shadow-sm outline-none transition focus:border-cyan-700 focus:ring-2 focus:ring-cyan-700/20 aria-[invalid=true]:border-rose-700"
+            >
+              <option value="">Selecciona una opción</option>
+              <option value="España">España</option>
+              <option value="Estados Unidos">Estados Unidos</option>
+              <option value="Otro">Otro</option>
+            </select>
+            <p id="country-error" class="mt-2 text-sm font-medium text-rose-800" hidden role="alert"></p>
+          </div>
+
+          <div>
+            <label for="experience" class="block text-sm font-semibold text-slate-900">Años de experiencia <span aria-hidden="true">*</span></label>
+            <input
+              id="experience"
+              name="experience"
+              type="number"
+              min="0"
+              max="50"
+              step="any"
+              inputmode="decimal"
+              required
+              aria-describedby="experience-error"
+              class="mt-2 min-h-12 w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-950 shadow-sm outline-none transition focus:border-cyan-700 focus:ring-2 focus:ring-cyan-700/20 aria-[invalid=true]:border-rose-700"
+            >
+            <p id="experience-error" class="mt-2 text-sm font-medium text-rose-800" hidden role="alert"></p>
+          </div>
+
+          <div>
+            <label for="sector" class="block text-sm font-semibold text-slate-900">Sector de interés <span aria-hidden="true">*</span></label>
+            <select
+              id="sector"
+              name="sector"
+              required
+              aria-describedby="sector-error"
+              class="mt-2 min-h-12 w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-950 shadow-sm outline-none transition focus:border-cyan-700 focus:ring-2 focus:ring-cyan-700/20 aria-[invalid=true]:border-rose-700"
+            >
+              <option value="">Selecciona una opción</option>
+              <option value="Tecnología">Tecnología</option>
+              <option value="Retail">Retail</option>
+              <option value="Servicios Financieros">Servicios Financieros</option>
+              <option value="Consultoría">Consultoría</option>
+              <option value="Otro">Otro</option>
+            </select>
+            <p id="sector-error" class="mt-2 text-sm font-medium text-rose-800" hidden role="alert"></p>
+          </div>
+
+          <div>
+            <label for="english-level" class="block text-sm font-semibold text-slate-900">Nivel de inglés <span aria-hidden="true">*</span></label>
+            <select
+              id="english-level"
+              name="englishLevel"
+              required
+              aria-describedby="english-level-error"
+              class="mt-2 min-h-12 w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-950 shadow-sm outline-none transition focus:border-cyan-700 focus:ring-2 focus:ring-cyan-700/20 aria-[invalid=true]:border-rose-700"
+            >
+              <option value="">Selecciona una opción</option>
+              <option value="Básico">Básico</option>
+              <option value="Intermedio">Intermedio</option>
+              <option value="Avanzado">Avanzado</option>
+              <option value="Nativo">Nativo</option>
+            </select>
+            <p id="english-level-error" class="mt-2 text-sm font-medium text-rose-800" hidden role="alert"></p>
+          </div>
+
+          <fieldset class="lg:col-span-2">
+            <legend class="text-sm font-semibold text-slate-900">Disponibilidad <span aria-hidden="true">*</span></legend>
+            <div id="availability-group" class="mt-3 grid gap-3 sm:grid-cols-2" aria-describedby="availability-error">
+              <label class="flex min-h-12 cursor-pointer items-center gap-3 rounded-lg border border-slate-300 px-4 py-3 focus-within:border-cyan-700 focus-within:ring-2 focus-within:ring-cyan-700/20">
+                <input id="availability-immediate" name="availability" type="radio" value="Inmediata" required class="h-4 w-4 accent-cyan-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-700">
+                <span>Inmediata</span>
+              </label>
+              <label class="flex min-h-12 cursor-pointer items-center gap-3 rounded-lg border border-slate-300 px-4 py-3 focus-within:border-cyan-700 focus-within:ring-2 focus-within:ring-cyan-700/20">
+                <input id="availability-one-month" name="availability" type="radio" value="1 mes" class="h-4 w-4 accent-cyan-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-700">
+                <span>1 mes</span>
+              </label>
+              <label class="flex min-h-12 cursor-pointer items-center gap-3 rounded-lg border border-slate-300 px-4 py-3 focus-within:border-cyan-700 focus-within:ring-2 focus-within:ring-cyan-700/20">
+                <input id="availability-two-three-months" name="availability" type="radio" value="2-3 meses" class="h-4 w-4 accent-cyan-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-700">
+                <span>2-3 meses</span>
+              </label>
+              <label class="flex min-h-12 cursor-pointer items-center gap-3 rounded-lg border border-slate-300 px-4 py-3 focus-within:border-cyan-700 focus-within:ring-2 focus-within:ring-cyan-700/20">
+                <input id="availability-exploring" name="availability" type="radio" value="Solo explorando" class="h-4 w-4 accent-cyan-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-700">
+                <span>Solo explorando</span>
+              </label>
+            </div>
+            <p id="availability-error" class="mt-2 text-sm font-medium text-rose-800" hidden role="alert"></p>
+          </fieldset>
+
+          <div class="lg:col-span-2">
+            <label for="linkedin" class="block text-sm font-semibold text-slate-900">LinkedIn (URL del perfil) <span class="font-normal text-slate-600">(opcional)</span></label>
+            <input
+              id="linkedin"
+              name="linkedin"
+              type="url"
+              inputmode="url"
+              placeholder="https://www.linkedin.com/in/tu-perfil"
+              aria-describedby="linkedin-hint"
+              class="mt-2 min-h-12 w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-950 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-cyan-700 focus:ring-2 focus:ring-cyan-700/20 aria-[invalid=true]:border-rose-700"
+            >
+            <p id="linkedin-hint" class="mt-2 text-sm text-slate-600">Si incluyes tu perfil, utiliza una URL que comience con http:// o https://.</p>
+            <p id="linkedin-error" class="mt-2 text-sm font-medium text-rose-800" hidden role="alert"></p>
+          </div>
+
+          <div class="lg:col-span-2">
+            <label for="comments" class="block text-sm font-semibold text-slate-900">Comentarios adicionales <span class="font-normal text-slate-600">(opcional)</span></label>
+            <textarea
+              id="comments"
+              name="comments"
+              rows="4"
+              maxlength="500"
+              aria-describedby="comments-counter"
+              class="mt-2 w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-950 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-cyan-700 focus:ring-2 focus:ring-cyan-700/20 aria-[invalid=true]:border-rose-700"
+            ></textarea>
+            <p id="comments-counter" class="mt-2 text-sm text-slate-600" aria-live="polite">500 caracteres restantes</p>
+            <p id="comments-error" class="mt-2 text-sm font-medium text-rose-800" hidden role="alert"></p>
+          </div>
+
+          <div class="lg:col-span-2">
+            <div class="flex items-start gap-3">
+              <input
+                id="data-policy"
+                name="dataPolicy"
+                type="checkbox"
+                required
+                aria-describedby="data-policy-hint"
+                class="mt-1 h-5 w-5 shrink-0 rounded border-slate-400 accent-cyan-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-700"
+              >
+              <label for="data-policy" class="text-sm leading-6 text-slate-700">
+                Acepto política de datos <span aria-hidden="true">*</span>
+              </label>
+            </div>
+            <p id="data-policy-hint" class="mt-2 text-sm text-slate-600">Debes aceptar para poder enviar el formulario.</p>
+            <p id="data-policy-error" class="mt-2 text-sm font-medium text-rose-800" hidden role="alert"></p>
+          </div>
+
+          <div class="flex flex-col gap-3 border-t border-slate-200 pt-6 sm:flex-row sm:justify-end lg:col-span-2">
+            <button
+              type="reset"
+              class="inline-flex min-h-12 items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-center font-semibold text-slate-800 transition hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-700"
+            >Limpiar formulario</button>
+            <button
+              type="submit"
+              class="inline-flex min-h-12 items-center justify-center rounded-full bg-cyan-800 px-6 py-3 text-center font-semibold text-white transition hover:bg-cyan-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-700"
+            >Enviar</button>
+          </div>
+        </fieldset>
+
+        <noscript>
+          <p class="mt-6 rounded-lg border border-amber-300 bg-amber-50 p-4 text-sm leading-6 text-amber-950">
+            Para usar y enviar este formulario simulado necesitas habilitar JavaScript. No se enviarán ni guardarán tus datos.
+          </p>
+        </noscript>
+
+        <section
+          id="success-message"
+          class="mt-8 rounded-2xl border border-emerald-200 bg-emerald-50 p-6 text-emerald-950"
+          aria-labelledby="success-title"
+          role="status"
+          aria-live="polite"
+          tabindex="-1"
+          hidden
+        >
+          <h2 id="success-title" class="text-xl font-semibold">¡Gracias por tu interés en Nexova!</h2>
+          <p class="mt-3 leading-7">
+            Hemos recibido tu información. Nuestro equipo de selección la revisará y te contactaremos en caso de que tu perfil encaje con alguna de nuestras oportunidades actuales o futuras.
+          </p>
+          <p class="mt-3 leading-7">
+            Mientras tanto, síguenos en <a class="rounded-sm font-semibold underline decoration-emerald-700 underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-800" href="https://linkedin.com/company/nexova">LinkedIn</a> para estar al día de nuestras vacantes y contenido sobre desarrollo profesional.
+          </p>
+        </section>
+      </form>
+
+      <aside class="mt-6 rounded-2xl border border-cyan-100 bg-cyan-50 p-6" aria-label="Contacto para empresas">
+        <p class="leading-7 text-slate-800">
+          ¿Eres una empresa buscando talento? Escríbenos a
+          <a class="rounded-sm font-semibold text-cyan-900 underline decoration-cyan-700 underline-offset-4 hover:text-cyan-950 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-700" href="mailto:contacto@nexova.com">contacto@nexova.com</a>
+        </p>
+      </aside>
+    </main>
+
+    <footer class="bg-slate-950 text-slate-300">
+      <div class="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+        <p class="text-sm">© 2025 Nexova. Todos los derechos reservados.</p>
+        <a class="w-fit rounded-sm text-sm font-medium underline decoration-slate-500 underline-offset-4 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300" href="index.html">Volver a Nexova</a>
+      </div>
+    </footer>
+  </body>
+</html>

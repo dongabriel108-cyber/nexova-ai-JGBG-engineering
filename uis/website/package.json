@@ -1,0 +1,19 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Esta aplicación contiene el sitio web público de Nexova para el Hito 1 de 4Geeks Academy. Su alcance corresponde a Marketing y Comunicaciones, dirigido por Carmen Ruiz: presentar la empresa y sus servicios, y permitir que profesionales interesados en oportunidades laborales se registren mediante un formulario.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/styles.css",
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/styles.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.0",
+    "tailwindcss": "^4.3.3"
+  }
+}
